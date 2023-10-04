@@ -96,7 +96,15 @@ class Node{
 	  
 	   public void postOrderTraversal(Node root){
          //implement in here
-		   
+		   if(root == null)
+            return;
+        // Then recur on left subtree
+        postOrderTraversal(root.left);
+ 
+        // Now recur on right subtree
+        postOrderTraversal(root.right);
+        // First print data of node
+        System.out.print(root.value + " ");
 	   }
 	   
 	   
