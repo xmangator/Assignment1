@@ -141,7 +141,13 @@ class Node{
 	   */
 	   public int getMin(Node root){
          //implement in here
-	      
+	      Node current = root;
+ 
+        /* loop down to find the leftmost leaf */
+        while (current.left != null) {
+            current = current.left;
+        }
+        return (current.value);
 	   }
 	  
 	  
