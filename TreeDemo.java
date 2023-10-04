@@ -115,7 +115,22 @@ class Node{
 	   */
 	   public boolean find(Node root, int key){
 		 //implement in here
-		  
+		 if (root == null){ 
+       return false; 
+       }
+       if (root.value == key){ 
+       return true; // then check left subtree / 
+       }
+       boolean node1 = find(root.left, key); // node found, no need to look further 
+       if (node1){ 
+         return true; //if node is not found in left, // then check right the sub-tree / 
+       }
+       boolean node2 = find(root.right, key); 
+       if (node2) 
+       {
+       return true; 
+       }
+       return false;
 	   }
 	   
 	   
