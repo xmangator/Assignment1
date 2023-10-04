@@ -75,6 +75,17 @@ class Node{
 	   */
 	   public void inOrderTraversal(Node root){
 	      //implement in here
+	      if (root == null)
+            return;
+ 
+         // First recur on left child
+         inOrderTraversal(root.left);
+ 
+         // Then print the data of node
+         System.out.print(root.value + " ");
+ 
+         // Now recur on right child
+         inOrderTraversal(root.right);
 	   }
 	   
 	   
