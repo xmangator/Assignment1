@@ -158,7 +158,13 @@ class Node{
 	   */
 	   public int getMax(Node root){
          //implement in here
+        Node current = root;
+        while (current.right != null){
+            current = current.right;
+        }
+        return (current.value);
 	   }
+
 	   
 	   
 	   
